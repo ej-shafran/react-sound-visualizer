@@ -1,7 +1,7 @@
 {
   "name": "react-sound-visualizer",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1-alpha",
   "type": "module",
   "scripts": {
       "build": "tsc && copy .\\package.json .\\dist\\package.json && copy .\\README.md .\\dist\\README.md"
