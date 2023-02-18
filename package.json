@@ -1,19 +1,38 @@
 {
   "name": "react-sound-visualizer",
-  "private": true,
   "version": "0.0.1-alpha",
-  "type": "module",
-  "scripts": {
-      "build": "tsc && copy .\\package.json .\\dist\\package.json && copy .\\README.md .\\dist\\README.md"
-  },
+  "description": "A lightweight wrapper for the sound-visualizer library",
+  "main": "index.js",
+  "types": "index.d.ts",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "sound-visualizer": "^1.0.4"
   },
+  "scripts": {
+    "build": "tsc && copy .\\\\package.json .\\\\dist\\\\package.json && copy .\\\\README.md .\\\\dist\\\\README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ej-shafran/react-sound-visualizer.git"
+  },
+  "keywords": [
+    "react",
+    "audio",
+    "sound",
+    "visualizer"
+  ],
+  "author": "ej-shafran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ej-shafran/react-sound-visualizer/issues"
+  },
+  "homepage": "https://github.com/ej-shafran/react-sound-visualizer#readme",
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "typescript": "^4.9.3"
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": ">= 16"
   }
 }
