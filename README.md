@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   return (
-      <Visualizer audio={audio} mode="current" lineWidth="thin">
+      <Visualizer audio={audio}>
         {({ canvasRef, stop, start, reset }) => (
           <>
             <canvas ref={canvasRef} width={500} height={100} />
