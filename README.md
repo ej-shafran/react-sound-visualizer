@@ -2,7 +2,9 @@
 
 ## Description
 
-This library acts as a lightweight React wrapper for [sound-visualizer](https://www.npmjs.com/package/sound-visualizer).
+This library acts as a lightweight React wrapper for [sound-visualizer](https://github.com/ej-shafran/sound-visualizer).
+
+You can check it out by visiting [the codesandbox](https://codesandbox.io/s/react-sound-visualizer-demo-gi8uhd).
 
 ## Getting Started
 
@@ -66,7 +68,7 @@ If you need even more control over the visualization, the `useVisualizer` hook (
 |-----------------|--------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **audio**       | `MediaStream \| null`                      |                | The audio to visualize. Can be `null` since usually that's how your state will be initialized, but note that the functions will not be defined while it is `null`.                                                                                                                |
 | **children**    | `React.FC<VisualizerChildrenProps>`        |                | See **Types** section below.                                                                                                                                                                                                                                                      |
-| **mode**        | `"current" \| "continuous"`                | `"continuous"` | The visualizer version to use. You can check out the [sound-visualizer](https://www.npmjs.com/package/sound-visualizer) docs to learn more about what each version means.                                                                                                         |
+| **mode**        | `"current" \| "continuous"`                | `"continuous"` | The visualizer version to use. You can check out the [sound-visualizer](https://github.com/ej-shafran/sound-visualizer) docs to learn more about what each version means.                                                                                                         |
 | **lineWidth**   | `number \| "thin" \| "thick" \| "default"` | `"default"`    | The width of each line drawn onto the canvas for the visualization.  <br> If a thickness string is provided, it will be translated into a percentage of the canvas's width; if a number is provided it will be used a `px` value.                                                 |
 | **strokeColor** | `string`                                   | `"#000"`       | The color of each line drawn onto the canvas for the visualization.                                                                                                                                                                                                               |
 | **slices**      | `number`                                   | `100`          | The number of slices drawn onto the canvas to make up the wave.  <br> *Only available as a prop when `mode` is `"continuous"`*                                                                                                                                                    |
