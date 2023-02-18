@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import {
-  VisualizerFunctions,
   DrawCurrentOptions,
   DrawContinuousOptions,
 } from "sound-visualizer";
@@ -20,10 +19,6 @@ type ContinuousOptions = {
  **/
 export type UseVisualizerOptions = CurrentOptions | ContinuousOptions;
 
-type UndefinedValues<T> = {
-  [K in keyof T]: undefined;
-}
-
 /**
  * Hook that wraps the `visualizer` functions from `sound-visualizer` with a `useMemo`.
  * 
@@ -37,7 +32,7 @@ export function useVisualizer(
   audio: MediaStream | null,
   canvas: HTMLCanvasElement | null,
   options: UseVisualizerOptions
-): VisualizerFunctions | UndefinedValues<VisualizerFunctions> {
+) {
   return useMemo(() => {
     return visualizerWrapper(audio, canvas, options);
   }, [canvas, audio]);
