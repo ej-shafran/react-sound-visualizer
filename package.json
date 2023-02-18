@@ -1,0 +1,19 @@
+{
+  "name": "react-sound-visualizer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+      "build": "tsc && copy .\\package.json .\\dist\\package.json && copy .\\README.md .\\dist\\README.md"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sound-visualizer": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "typescript": "^4.9.3"
+  }
+}
