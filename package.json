@@ -1,6 +1,6 @@
 {
   "name": "react-sound-visualizer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight wrapper for the sound-visualizer library",
   "main": "index.js",
   "types": "index.d.ts",
@@ -8,7 +8,7 @@
     "sound-visualizer": "^1.0.4"
   },
   "scripts": {
-    "build": "tsc && copy .\\\\package.json .\\\\dist\\\\package.json && copy .\\\\README.md .\\\\dist\\\\README.md"
+    "build": "tsc && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md && cp ./.npmrc ./dist/.npmrc"
   },
   "repository": {
     "type": "git",

@@ -35,5 +35,5 @@ export function useVisualizer(
 ) {
   return useMemo(() => {
     return visualizerWrapper(audio, canvas, options);
-  }, [canvas, audio]);
+  }, [canvas]);
 }
