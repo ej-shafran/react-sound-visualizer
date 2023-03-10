@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useVisualizer, UseVisualizerOptions } from "./useVisualizer";
 
 /**
@@ -7,7 +7,7 @@ import { useVisualizer, UseVisualizerOptions } from "./useVisualizer";
 export interface VisualizerChildrenProps {
   /**
    * Sets the canvas for the `Visualizer` to draw on.
-   * 
+   *
    * Should be passed as the `ref` prop to an HTML `canvas` element.
    **/
   canvasRef: (canvas: HTMLCanvasElement) => void;
@@ -37,14 +37,24 @@ export type VisualizerProps = UseVisualizerOptions & {
    * in case it's a recording.
    **/
   audio: MediaStream | null;
+  /**
+   * When `true`, the `start` function will be run as soon as there is audio and a canvas.
+   **/
+  autoStart?: boolean;
 };
 
 export const Visualizer: React.FC<VisualizerProps> = (props) => {
-  const { audio, children: Children, ...visualizerOptions } = props;
+  const { audio, children: Children, autoStart, ...visualizerOptions } = props;
 
   const [canvas, setCanvas] = useState<HTMLCanvasElement | null>(null);
 
   const functions = useVisualizer(audio, canvas, visualizerOptions);
 
-  return <>{!!Children && <Children canvasRef={setCanvas} {...functions} />}</>
+  useEffect(() => {
+    if (!autoStart) return;
+
+    if (functions.start) functions.start();
+  }, [audio, canvas]);
+
+  return <>{!!Children && <Children canvasRef={setCanvas} {...functions} />}</>;
 };

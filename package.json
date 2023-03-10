@@ -1,6 +1,6 @@
 {
   "name": "react-sound-visualizer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A lightweight wrapper for the sound-visualizer library",
   "main": "index.js",
   "types": "index.d.ts",
