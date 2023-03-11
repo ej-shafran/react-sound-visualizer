@@ -1,12 +1,9 @@
 {
   "name": "react-sound-visualizer",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A lightweight wrapper for the sound-visualizer library",
   "main": "index.js",
   "types": "index.d.ts",
-  "dependencies": {
-    "sound-visualizer": "^1.0.7"
-  },
   "scripts": {
     "build": "tsc && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md"
   },
@@ -18,7 +15,16 @@
     "react",
     "audio",
     "sound",
-    "visualizer"
+    "visualizer",
+    "sound-visualizer",
+    "audio-visualizer",
+    "waveform",
+    "waveform-visualizer",
+    "microphone",
+    "recording",
+    "microphone-visualizer",
+    "recording-visualizer",
+    "microphone-recording"
   ],
   "author": "ej-shafran",
   "license": "ISC",
@@ -34,5 +40,8 @@
   },
   "peerDependencies": {
     "react": ">= 16"
+  },
+  "dependencies": {
+    "sound-visualizer": "^1.1.0"
   }
 }
