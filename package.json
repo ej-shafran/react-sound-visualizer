@@ -71,6 +71,6 @@
     "react": ">= 16"
   },
   "dependencies": {
-    "sound-visualizer": "^1.1.0"
+    "sound-visualizer": "^1.2.0"
   }
 }
