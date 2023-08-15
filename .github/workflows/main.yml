@@ -1,0 +1,21 @@
+name: Ensure Types Are Correct
+
+on: 
+  pull_request: 
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  ATTW:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+      - name: Install Dependencies (Along With ATTW)
+        run: npm install @arethetypeswrong/cli
+      - name: Are The Types Wrong?
+        # package should be built automatically using `prepack`
+        run: npx @arethetypeswrong/cli --pack
