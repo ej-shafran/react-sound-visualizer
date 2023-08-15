@@ -2,30 +2,30 @@
   "name": "react-sound-visualizer",
   "version": "1.0.8",
   "description": "A lightweight wrapper for the sound-visualizer library",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": ["./dist"],
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "files": ["./lib"],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts"
     },
-    "./useVisualizer": {
-      "require": "./dist/useVisualizer.js",
-      "import": "./dist/useVisualizer.mjs",
-      "types": "./dist/useVisualizer.d.ts"
+    "./lib/useVisualizer": {
+      "require": "./lib/useVisualizer.js",
+      "import": "./lib/useVisualizer.mjs",
+      "types": "./lib/useVisualizer.d.ts"
     },
-    "./Visualizer": {
-      "require": "./dist/Visualizer.js",
-      "import": "./dist/Visualizer.mjs",
-      "types": "./dist/Visualizer.d.ts"
+    "./lib/Visualizer": {
+      "require": "./lib/Visualizer.js",
+      "import": "./lib/Visualizer.mjs",
+      "types": "./lib/Visualizer.d.ts"
     },
-    "./visualizerWrapper": {
-      "require": "./dist/visualizerWrapper.js",
-      "import": "./dist/visualizerWrapper.mjs",
-      "types": "./dist/visualizerWrapper.d.ts"
+    "./lib/visualizerWrapper": {
+      "require": "./lib/visualizerWrapper.js",
+      "import": "./lib/visualizerWrapper.mjs",
+      "types": "./lib/visualizerWrapper.d.ts"
     }
   },
   "repository": {
@@ -52,7 +52,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "prepack": "npm run build",
-    "build": "npx tsup ./src/ --format cjs,esm --dts --clean"
+    "build": "npx tsup ./src/ --format cjs,esm --dts --clean --out-dir lib"
   },
   "bugs": {
     "url": "https://github.com/ej-shafran/react-sound-visualizer/issues"
