@@ -61,7 +61,7 @@
   },
   "homepage": "https://github.com/ej-shafran/react-sound-visualizer#readme",
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@types/react": "^19.0.2",
     "@types/react-dom": "^18.0.11",
     "react-dom": "^18.2.0",
     "tsup": "^8.0.0",
